@@ -3,6 +3,7 @@ import * as interact from 'interact.js';
 import {GamePlay} from "../game-play/game-play";
 import {Ship} from "../../providers/ship";
 import {GameField} from "../../providers/game-field";
+import * as io from "socket.io-client";
 
 
 @Page({
@@ -21,6 +22,13 @@ export class GameSetup {
         for ( let i = 0; i < 100; i++ ) {
             this.cells.push(i);
         }
+
+        let socket = io('http://localhost:8085');
+
+        socket.on('hello', message => {
+            console.log(message);
+            socket.emit('hello', 'to you');
+        });
     }
 
     initShip($game: HTMLElement, type: number) {

@@ -22,7 +22,7 @@
     "ionic-gulp-html-copy": "^1.0.0",
     "ionic-gulp-sass-build": "^1.0.0",
     "ionic-gulp-scripts-copy": "^1.0.0",
-    "node-sass": "3.4.2"
+    "node-sass": "4.14.1"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
